@@ -1,0 +1,28 @@
+{
+  "name": "booksotre",
+  "version": "1.0.0",
+  "description": "mern Project",
+  "homepage": "https://github.com/Shahzaman123456/BookSotre-Fullstack-Project#readme",
+  "bugs": {
+    "url": "https://github.com/Shahzaman123456/BookSotre-Fullstack-Project/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shahzaman123456/BookSotre-Fullstack-Project.git"
+  },
+  "license": "ISC",
+  "author": "shahzaman",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "mongoose": "^8.18.1",
+    "nodemon": "^3.1.10"
+  }
+}
