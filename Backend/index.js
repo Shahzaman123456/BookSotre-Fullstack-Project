@@ -10,6 +10,10 @@ app.use(cors());
 app.use(express.json());
 dotenv.config();
 
+app.use(cros({
+  origin: ['http://localhost:3000' ,"https://booksotre-fullstack.netlify.app"]
+}));
+
  
 const  PORT = process.env.PORT || 4000;
 
