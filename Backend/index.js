@@ -10,8 +10,13 @@ app.use(cors());
 app.use(express.json());
 dotenv.config();
 
-app.use(cros({
-  origin: ['http://localhost:4000' ,"https://booksotre-fullstack.netlify.app"]
+pp.use(cors({
+  origin: [
+    "http://localhost:4000",               // for local React dev
+    "https://booksotre-fullstack.netlify.app" // your Netlify frontend
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
 }));
 
  
