@@ -11,7 +11,7 @@ app.use(express.json());
 dotenv.config();
 
 app.use(cros({
-  origin: ['http://localhost:3000' ,"https://booksotre-fullstack.netlify.app"]
+  origin: ['http://localhost:4000' ,"https://booksotre-fullstack.netlify.app"]
 }));
 
  
