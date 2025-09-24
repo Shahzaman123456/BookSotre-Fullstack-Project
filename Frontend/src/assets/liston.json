@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Learn JavaScript",
+    "author": "John Doe",
+    "category": "Free",
+    "price": "$0" ,
+    "image": "book3.jpg",
+    "description": "A beginner-friendly guide to JavaScript covering syntax, DOM, and practical examples."
+  },
+  {
+    "id": 2,
+    "name": "React for Beginners",
+    "author": "Jane Smith",
+    "category": "Free",
+    "price": "$0" ,
+    "image": "react.jpg",
+    "description": "Step-by-step introduction to React.js, focusing on components, hooks, and state management."
+  },
+  {
+    "id": 3,
+    "name": "Mastering Python",
+    "author": "Ali Khan",
+    "category": "Free",
+    "price": "$0" ,
+    "image": "phyton.jpeg",
+    "description": "Comprehensive Python guide covering basics, OOP, and advanced libraries like NumPy and Pandas."
+  },
+  {
+    "id": 4,
+    "name": "Web Development Bootcamp",
+    "author": "Sara Malik",
+    "category": "Free",
+    "price": "$0" ,
+    "image": "webdevelop.jpeg",
+    "description": "Full-stack web development course including HTML, CSS, JavaScript, Node.js, and databases."
+  },
+  {
+    "id": 5,
+    "name": "C++ Made Easy",
+    "author": "Michael Lee",
+    "category": "Free",
+    "price": "$0" ,
+    "image": "clang.jpg",
+    "description": "Learn C++ from scratch with easy-to-follow examples, focusing on core concepts and problem-solving."
+  },
+  {
+    "id": 6,
+    "name": "Data Structures",
+    "author": "Fatima Noor",
+    "category": "Free",
+    "price": "$0" ,
+    "image": "data.jpeg",
+    "description": "Understand key data structures such as arrays, linked lists, trees, graphs, and their applications."
+  },
+  {
+    "id": 7,
+    "name": "Artificial Intelligence",
+    "author": "Ahmed Raza",
+    "category": "Paid",
+    "price": 20,
+    "image": "https://picsum.photos/200/300?random=7",
+    "description": "Dive into AI fundamentals, including search algorithms, neural networks, and real-world use cases."
+  },
+  {
+    "id": 8,
+    "name": "Machine Learning Guide",
+    "author": "Hina Qureshi",
+    "category": "Paid",
+    "price": 25,
+    "image": "https://picsum.photos/200/300?random=8",
+    "description": "Practical machine learning with Python—covering supervised, unsupervised, and reinforcement learning."
+  },
+  {
+    "id": 9,
+    "name": "Full-Stack Development",
+    "author": "David Wong",
+    "category": "Paid",
+    "price": 30,
+    "image": "https://picsum.photos/200/300?random=9",
+    "description": "Master front-end and back-end technologies to become a full-stack developer with real projects."
+  },
+  {
+    "id": 10,
+    "name": "Cyber Security Basics",
+    "author": "Maryam Shah",
+    "category": "Paid",
+    "price": 18,
+    "image": "https://picsum.photos/200/300?random=10",
+    "description": "Learn the essentials of cyber security including threats, prevention methods, and ethical hacking basics."
+  }
+]
