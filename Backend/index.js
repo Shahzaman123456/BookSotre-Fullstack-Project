@@ -23,10 +23,13 @@ try {
 }
 
 // // default route
-// app.get("/", (req, res) => {
-//   res.send("Hello from Bookstore Backend 🚀");
-// });
-
+app.get("/", (req, res) => {
+  res.send({
+    activestatus: true,
+    error: false,
+  });
+});
+ 
 // defining route..
 app.use('/book',bookRoute)
 app.use("/users",userRouter)
