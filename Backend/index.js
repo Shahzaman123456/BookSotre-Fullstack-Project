@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 dotenv.config();
 
-pp.use(cors({
+app.use(cors({
   origin: [
     "http://localhost:4000",               // for local React dev
     "https://booksotre-fullstack.netlify.app" // your Netlify frontend
