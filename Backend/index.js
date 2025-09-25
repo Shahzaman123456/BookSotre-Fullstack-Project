@@ -13,7 +13,7 @@ dotenv.config();
 app.use(cors({
   origin: [
     "http://localhost:4000",               // for local React dev
-    "https://booksotre-fullstack.netlify.app" // your Netlify frontend
+    "https://book-sotre-fullstack-frontend.vercel.app/" // your Netlify frontend
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
