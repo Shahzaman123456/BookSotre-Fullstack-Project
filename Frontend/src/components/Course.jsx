@@ -8,11 +8,13 @@ import axios from 'axios'
 
 
 const Course = () => {
+  const API_URL = import.meta.env.VITE_BACKEND_URL;
+
   const [book,setbook]=useState([])
   useEffect(() => {
     const getBook = async () => {
       try {
-        const res = await axios.get("http://localhost:4001/book");
+        const res = await axios.get(`${API_URL}/book`);
         console.log(res.data);
         setbook(res.data); // ✅ now res is defined
       } catch (error) {
@@ -27,7 +29,7 @@ const Course = () => {
         <div className="mt-28 items-center justify-center text-center">
           <h1 className="text-2xl md:w-4xl">
             We're delighted to have you{" "}
-            <span className="text-pink-500"> here! : )</span>
+            <span className="text-pink-500"> here! : </span>
           </h1>
           <p className="mt-5">
             Powerful words on books celebrate them as vessels of knowledge,

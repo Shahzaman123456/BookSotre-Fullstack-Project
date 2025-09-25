@@ -8,6 +8,8 @@ import { useAuth } from "../context/AuthicPrvider.jsx";
 import { login } from "../../../Backend/controller/user.controller.js";
 
 const SignUP = () => {
+  const API_URL = import.meta.env.VITE_BACKEND_URL;
+
   const { setAuthUser } = useAuth();
   const {
     register,
@@ -29,7 +31,7 @@ const SignUP = () => {
     };
 
     try {
-      const res = await axios.post("http://localhost:4001/users/signup", userInfo);
+      const res = await axios.post(`${API_URL}/users/signup`, userInfo);
       if (res.data) {
         toast.success("Signup Successfully!");
       <Navigate to="/"/>
