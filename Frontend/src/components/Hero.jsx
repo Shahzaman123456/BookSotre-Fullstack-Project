@@ -15,10 +15,7 @@ const Hero = () => {
               <span className="text-pink-500">new everyday!!!</span>
             </h1>
             <p className="text-xl">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
-              asperiores architecto quibusdam et quis tempora, minima neque
-              placeat. Facilis neque nam explicabo facere eaque ut blanditiis
-              minus autem laudantium enim.
+             Books are more than just pages and ink; they are gateways to new worlds, ideas, and perspectives. Every book we read shapes our understanding, sparks our imagination, and teaches us lessons that stay with us for a lifetime. Whether fiction or non-fiction, each story has the power to transform us.
             </p>
           </div>
 

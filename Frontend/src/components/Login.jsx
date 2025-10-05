@@ -2,40 +2,46 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineClose } from "react-icons/ai";
 import { useForm } from "react-hook-form";
-import axios  from "axios";
+import axios from "axios";
 import toast from "react-hot-toast";
-const Login = () => {
-  const API_URL = import.meta.env.VITE_BACKEND_URL;
 
+const API_URL = import.meta.env.VITE_BACKEND_URL;
+
+const Login = () => {
+  console.log(API_URL);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async(data) => {
+  const onSubmit = async (data) => {
     document.getElementById("my_modal_1")?.close(); // close
-const userInfo={
-    fullname:data.fullname,
-    email:data.email,
-    password:data.password
-    }
-    await  axios.post(`${API_URL}/users/login`,userInfo)
-    .then((res)=>{
-      console.log(res.data);
-      if(res.data){
-        toast.success('Loggedin Successfully!');
-         setTimeout(() => {
-           window.location.reload();
-        }, 2000);
-      }
-   localStorage.setItem("users",JSON.stringify(res.data.user));
-    }).catch((err)=>{
-    if(err.response){
-      console.log(err)
-      toast.error('Error'+err.response.data.message);
-    }
-    })
+    const userInfo = {
+      email: data.email,
+      password: data.password,
+    };
+    console.log("Sending userInfo", userInfo);
+
+    await axios
+      .post(`${API_URL}/users/login`, userInfo)
+      .then((res) => {
+        if (res.data) {
+          toast.success("Loggedin Successfully!");
+          document.getElementById("my_modal_1")?.close();
+          setTimeout(() => {
+            window.location.reload();
+          }, 2000);
+        }
+        localStorage.setItem("users", JSON.stringify(res.data.user));
+        console.log("API Response:", res.data);
+      })
+      .catch((err) => {
+        if (err.response) {
+          console.log(err);
+          toast.error("Error" + err.response.data.message);
+        }
+      });
   };
 
   return (
@@ -69,7 +75,9 @@ const userInfo={
                 {...register("email", { required: "Email is required" })}
               />
               {errors.email && (
-                <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.email.message}
+                </p>
               )}
             </div>
 

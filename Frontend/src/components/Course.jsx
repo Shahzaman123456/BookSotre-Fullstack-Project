@@ -15,7 +15,6 @@ const Course = () => {
     const getBook = async () => {
       try {
         const res = await axios.get(`${API_URL}/book`);
-        console.log(res.data);
         setbook(res.data); // ✅ now res is defined
       } catch (error) {
         console.log("Fetch error", error);

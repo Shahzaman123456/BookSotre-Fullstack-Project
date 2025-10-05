@@ -6,6 +6,7 @@ import Logout from "./logout.jsx";
 
 const Navbar = () => {
   const { authUser } = useAuth();
+  
 
   const [sticky, setSticky] = useState(false);
   useEffect(() => {
@@ -222,7 +223,7 @@ const Navbar = () => {
             <button
               type="button"
               className="btn btn-primary hidden md:flex hover:btn-primary-focus transition-colors"
-              onClick={() => document.getElementById("my_modal_1").showModal()}
+              onClick={() =>  document.getElementById("my_modal_1").showModal()}
             >
               Login
             </button>
