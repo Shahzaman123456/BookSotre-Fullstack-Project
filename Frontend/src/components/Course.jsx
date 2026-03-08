@@ -7,9 +7,9 @@ import axios from 'axios'
 
 
 
-const Course = () => {
-  const API_URL = import.meta.env.VITE_BACKEND_URL;
+const API_URL = import.meta.env.VITE_BACKEND_URL;
 
+const Course = () => {
   const [book,setbook]=useState([])
   useEffect(() => {
     const getBook = async () => {
@@ -46,7 +46,7 @@ const Course = () => {
         {/* Cards Section */}
         <div className="grid gap-6 mt-10 md:grid-cols-2 lg:grid-cols-3">
           {book.map((item) => (
-            <Cards key={item.id} item={item} />
+            <Cards key={item._id} item={item} />
           ))}
         </div>
       </div>

@@ -1,19 +1,18 @@
 import express from 'express';
 import dotenv from 'dotenv';
+dotenv.config();
 import mongoose from 'mongoose';
-import bookRoute from '../Backend/route/book.route.js'
+import bookRoute from './route/book.route.js'
 import cors from 'cors'
-import userRouter from '../Backend/route/user.route.js'
+import userRouter from './route/user.route.js'
 
 const app = express();
-app.use(cors());
 app.use(express.json());
-dotenv.config();
 
 app.use(cors({
   origin: [
-    "http://localhost:4000",               // for local React dev
-    "https://book-sotre-fullstack-frontend.vercel.app/" // your Netlify frontend
+    "http://localhost:5173",
+    "https://book-sotre-fullstack-frontend.vercel.app"
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true

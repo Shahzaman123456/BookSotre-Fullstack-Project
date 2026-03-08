@@ -4,12 +4,11 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Cards from "./Cards";
 import axios from "axios";
-import { data } from "react-router-dom";
 
+
+const API_URL = import.meta.env.VITE_BACKEND_URL;
 
 const Freebook = () => {
-    const API_URL = import.meta.env.VITE_BACKEND_URL;
-
   const [book, setBook] = useState([]);
   useEffect(()=>{
     const getBook=async () =>{
@@ -71,7 +70,7 @@ const Freebook = () => {
    <div className="slider-container">
       <Slider {...settings}>
        {book.map((item)=>(
-        <Cards item={item} key={item.id}/>
+        <Cards item={item} key={item._id}/>
        ))}
       </Slider>
     </div>

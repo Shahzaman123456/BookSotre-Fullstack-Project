@@ -1,17 +1,13 @@
 import React from "react";
-import { useAuth } from "../context/AuthicPrvider.jsx"; // adjust path
+import { useAuth } from "../context/AuthicPrvider.jsx";
 import toast from "react-hot-toast";
-import User from "../../../Backend/model/user.model.js";
 
 const Logout = () => {
-  const { authUser, setAuthUser } = useAuth(); // ✅ use context
+  const { authUser, setAuthUser } = useAuth();
 
   const handleLogout = () => {
     try {
-     setAuthUser({
-        authUser,
-        User: null,
-      });
+      setAuthUser(null);
       localStorage.removeItem("users");
       toast.success("Logged out successfully");
        setTimeout(() => {
