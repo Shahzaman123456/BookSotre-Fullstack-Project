@@ -3,14 +3,14 @@ import Home from "./home/Home";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Courses from "./courses/Courses";
 import SignUP from "./components/SignUP";
-import toast, { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 import { useAuth } from "./context/AuthicPrvider";
 import Contact from "./components/Contact";
 
 
 const App = () => {
 
-const {authUser,setAuthUser} = useAuth()
+const {authUser} = useAuth()
 // console.log(authUser)    
   return (
     <>

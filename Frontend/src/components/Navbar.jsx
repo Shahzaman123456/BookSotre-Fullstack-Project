@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom"; // ✅ Use NavLink for SPA navigation
 import Login from "./Login";
 import { useAuth } from "../context/AuthicPrvider.jsx";
-import Logout from "./logout.jsx";
+import Logout from "./Logout.jsx";
 
 const Navbar = () => {
   const { authUser } = useAuth();

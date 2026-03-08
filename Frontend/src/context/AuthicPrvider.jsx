@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState } from "react";
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const AuthContext = createContext();
 
 const AuthicProvider = ({ children }) => {
@@ -18,4 +19,5 @@ const AuthicProvider = ({ children }) => {
 
 export default AuthicProvider;
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useAuth = () => useContext(AuthContext);

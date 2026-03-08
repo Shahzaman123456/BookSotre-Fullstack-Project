@@ -1,20 +1,19 @@
 import React from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineClose } from "react-icons/ai";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useAuth } from "../context/AuthicPrvider.jsx";
-import { login } from "../../../Backend/controller/user.controller.js";
 
 const SignUP = () => {
   const API_URL = import.meta.env.VITE_BACKEND_URL;
 
   const { setAuthUser } = useAuth();
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
@@ -34,9 +33,9 @@ const SignUP = () => {
       const res = await axios.post(`${API_URL}/users/signup`, userInfo);
       if (res.data) {
         toast.success("Signup Successfully!");
-      <Navigate to="/"/>
         localStorage.setItem("users", JSON.stringify(res.data.user));
-        setAuthUser(res.data.user); // ✅ update context
+        setAuthUser(res.data.user);
+        navigate("/");
       }
     } catch (err) {
       if (err.response) {
